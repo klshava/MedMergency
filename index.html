@@ -1,153 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Some Template</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+<html>
+  <head>
+    <title>Elastic Beanstalk</title>
+    <style>
+      body {
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-size:14px;
+        -moz-transition-property: text-shadow;
+        -moz-transition-duration: 4s;
+        -webkit-transition-property: text-shadow;
+        -webkit-transition-duration: 4s;
+        text-shadow: none;
+      }
+      body.blurry {
+        -moz-transition-property: text-shadow;
+        -moz-transition-duration: 4s;
+        -webkit-transition-property: text-shadow;
+        -webkit-transition-duration: 4s;
+        text-shadow: #fff 0px 0px 25px;
+      }
+      a {
+        color: #55aaff;
+      }
+      .textColumn, .linksColumn {
+        padding: 2em;
+      }
+      .textColumn {
+        position: absolute;
+        top: 0px;
+        right: 50%;
+        bottom: 0px;
+        left: 0px;
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/templatemo-blue.css">
-</head>
-<body data-spy="scroll" data-target=".navbar-collapse">
+        text-align: right;
+        padding-top: 11em;
+        background-color: #73A53E;
 
-<!-- preloader section -->
-<div class="preloader">
-	<div class="sk-spinner sk-spinner-wordpress">
-       <span class="sk-inner-circle"></span>
-     </div>
-</div>
+      }
+      .textColumn p {
+        width: 75%;
+        float:right;
+      }
+      .linksColumn {
+        position: absolute;
+        top:0px;
+        right: 0px;
+        bottom: 0px;
+        left: 50%;
 
-<!-- header section -->
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12">
-				<img src="images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
-				<hr>
-				<h1 class="tm-title bold shadow">Hi, I am a Template</h1>
-				<h1 class="white bold shadow">Aspiring CA(SA)</h1>
-			</div>
-		</div>
-	</div>
-</header>
+        background-color: #33342D;
+      }
 
-<!-- about and skills section -->
-<section class="container">
-	<div class="row">
-		<div class="col-md-6 col-sm-12">
-			<div class="about">
-				<h3 class="accent">Introduction</h3>
-				<h2></h2>
-				<p>I am a 3rd year Bachelor of Accounting Science student. An aspiring CA (SA) with an appetite for learning and tackling challenges. Goal driven and dedicated young lady who always puts her ultimate best in everything that I set my mind on. I have done Vacation work at PwC and KPMG. I also work as a part-time clerk for Murerutsi Capital. I tutor Applied Mathematics occasionally.</p>
-			</div>
-		</div>
-		<div class="col-md-6 col-sm-12">
-			<div class="skills">
-				<h2 class="white">Skills</h2>
-				<strong>Accounting</strong>
-				<span class="pull-right">70%</span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-primary" role="progressbar" 
-                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-					</div>
-				<strong>Applied Mathematics</strong>
-				<span class="pull-right">85%</span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-primary" role="progressbar" 
-                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-					</div>
-				<strong>Business Statistics</strong>
-				<span class="pull-right">95%</span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-primary" role="progressbar" 
-                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-					</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- education and languages -->
-<section class="container">
-	<div class="row">
-		<div class="col-md-8 col-sm-12">
-			<div class="education">
-				<h2 class="white">Education</h2>
-					<div class="education-content">
-						<h4 class="education-title accent">Bachelor of Science in Accounting Science</h4>
-							<div class="education-school">
-								<h5>University of the Witwatersrand</h5><span></span>
-								<h5>January 2018  - December 2021</h5>
-							</div>
-						<p class="education-description">I am currently in my 3rd year of study doing Auditing 3, Financial Accounting 3, Management Accounting 3 and Taxation 3 full time.</p>
-					</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-sm-12">
-			<div class="languages">
-				<h2>Languages</h2>
-					<ul>
-				
-						<li>English</li>
-						<li>Shona</li>
-						<li>Afrikaans</li>
-						<li>Zulu</li>
-					</ul>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- contact and experience -->
-<section class="container">
-	<div class="row">
-		<div class="col-md-4 col-sm-12">
-			<div class="contact">
-				<h2>Contact</h2>
-					<p><i class="fa fa-map-marker"></i>  Johannesburg, South Africa</p>
-					<p><i class="fa fa-phone"></i> +27 (0)71234567</p>
-					<p><i class="fa fa-envelope"></i>template@mail.com</p>
-			</div>
-		</div>
-		<div class="col-md-8 col-sm-12">
-			<div class="experience">
-				<h2 class="white">Experiences</h2>
-					<div class="experience-content">
-						<h4 class="experience-title accent">Vacation Work Student</h4>
-						<h5>KPMG International Cooperative </h5><span></span>
-						<h5>January 2020 - January 2020</h5>
-						<p class="education-description">It was a four day programme. I learnt the basics of how to audit a company (the journal entries etc)</p>
-					</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- footer section -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12">
-				<p>Copyright &copy; Template</p>
-				<ul class="social-icons">
-					<li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-					<li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
-					<li><a href="https://www.linkedin.com/in" class="fa fa-linkedin"></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<!-- javascript js -->	
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>	
-<script src="js/jquery.backstretch.min.js"></script>
-<script src="js/custom.js"></script>
-
-</body>
+      h1 {
+        color: #33342D;
+        font-size: 500%;
+        font-weight: normal;
+        margin-bottom: 0em;
+      }
+      h2 {
+        font-size: 200%;
+        font-weight: normal;
+        margin-bottom: 0em;
+      }
+      ul {
+        padding-left: 1em;
+        margin: 0px;
+      }
+      li {
+        margin: 1em 0em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="textColumn">
+      <h1>Congratulations</h1>
+      <p>Your first AWS Elastic Beanstalk Node.js application is now running on your own dedicated environment in the AWS Cloud</p>
+      <p>This environment is launched with Elastic Beanstalk Node.js Platform</p>
+    </div>
+    <div class="linksColumn">
+      <h2>What's Next?</h2>
+      <ul>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html">AWS Elastic Beanstalk overview</a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.html">AWS Elastic Beanstalk concepts</a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploy an Express Application to AWS Elastic Beanstalk</a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express_elasticache.html">Deploy an Express Application with Amazon ElastiCache to AWS Elastic Beanstalk</a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_geddy_elasticache.html">Deploy a Geddy Application with Amazon ElastiCache to AWS Elastic Beanstalk </a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_custom_container.html">Customizing and Configuring a Node.js Container </a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
+      </ul>
+    </div>
+  </body>
 </html>

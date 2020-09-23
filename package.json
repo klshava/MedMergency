@@ -1,23 +1,9 @@
 {
-  "name": "medmergency",
-  "version": "1.0.0",
-  "description": "A medical application to assist clients with doctor's consultations in the midst of Covid-19",
-  "main": "index.js",
+  "name": "Elastic-Beanstalk-Sample-App",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/klshava/MedMergency.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/klshava/MedMergency/issues"
-  },
-  "homepage": "https://github.com/klshava/MedMergency#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "start": "node app.js"
   }
 }
