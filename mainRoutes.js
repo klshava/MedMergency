@@ -1,91 +1,83 @@
 const express = require('express')
 const path = require('path')
 const mainRoutes = express.Router()
-//const config = require('./config.js')
-//const AmazonCognitoIdentity = require('amazon-cognito-identity-js')
+const userRouter = require(path.join(__dirname, 'routes', 'api', 'usersRoutes'))
 
-// const poolData = 
-// {
-//     userPoolId: config.cognito.userPoolId,
-//     clientId: config.cognito.clientId
-// }
+const passport = require('passport')
+const db = require('./models/db')
 
-// const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData)
-
-
+const { ensureAuthenticated } = require('./auth/auth')
+const { deleteSession } = require('./auth/auth')
 
 // GET home page
 mainRoutes.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'index.html'))
+  res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
-mainRoutes.get('/index.html', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'index.html'))
+mainRoutes.get('/index', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
 // GET sign up page
-mainRoutes.get('/register.html', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'register.html'))
+mainRoutes.get('/signup', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'signup.html'))
 })
-
-mainRoutes.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'register.html'))
-})
-
-// mainRoutes.post('/register', (req, res) => {
-// //res.send(req.body)
-
-// const email = req.body.email;
-// const password = req.body.password;
-// const confirm_password = req.body.confirm_password;
-
-// if(password !== confirm_password)
-// {
-//   return res.redirect('/register');
-// }
-
-// const emailData = {
-//   Name: 'email',
-//   Value: 'email'
-// };
-
-// const emailAttribute = new AmazonCognitoIdentity.CognitoUserAttribute(emailData);
-
-// userPool.signUp(email, password, [emailAttribute], null, (err, data) => {
-//   if(err) {
-//     return console.error(err);
-//   }
-//   res.send(data.user) 
-  
-// });
-
-// });
 
 // GET login page
-mainRoutes.get('/login.html', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'login.html'))
+mainRoutes.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'login.html'))
 })
 
 // GET T&C page
-mainRoutes.get('/services.html', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'services.html'))
+mainRoutes.get('/terms', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'terms.html'))
 })
 
 // GET main page
-mainRoutes.get('/about.html', (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'about.html'))
+mainRoutes.get('/main', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'main.html'))
+})
+
+// GET about page
+mainRoutes.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'about.html'))
+})
+
+// GET main page
+mainRoutes.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'services.html'))
 })
 
 
-// mainRoutes.post('/', (req, res, next) => {
-//   passport.authenticate('local', {
-//     successRedirect: 'signup',
-//     failureRedirect: '/',
-//     failureFlash: true
-//   })(req, res, next)
-// })
 
 
+
+// const db = require('./models/db')
+db.sequelize.sync()
+
+mainRoutes.post('/', (req, res, next) => {
+  passport.authenticate('local', {
+    successRedirect: 'signup',
+    failureRedirect: '/',
+    failureFlash: true
+  })(req, res, next)
+})
+
+mainRoutes.get('/logout', deleteSession, function (req, res) {
+  req.logout()
+  res.redirect('/')
+})
+// GET logout page
+mainRoutes.get('/logout', deleteSession, (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'logout.html'))
+})
+
+// change user password before login in
+mainRoutes.get('/changepassword', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'changePword.html'))
+})
+
+mainRoutes.use('/api/user', userRouter)
 module.exports = mainRoutes
 
 
