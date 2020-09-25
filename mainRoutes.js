@@ -1,16 +1,16 @@
 const express = require('express')
 const path = require('path')
 const mainRoutes = express.Router()
-const config = require('./config.js')
-const AmazonCognitoIdentity = require('amazon-cognito-identity-js')
+//const config = require('./config.js')
+//const AmazonCognitoIdentity = require('amazon-cognito-identity-js')
 
-const poolData = 
-{
-    userPoolId: config.cognito.userPoolId,
-    clientId: config.cognito.clientId
-}
+// const poolData = 
+// {
+//     userPoolId: config.cognito.userPoolId,
+//     clientId: config.cognito.clientId
+// }
 
-const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData)
+// const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData)
 
 
 
@@ -32,34 +32,34 @@ mainRoutes.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, '', 'register.html'))
 })
 
-mainRoutes.post('/register', (req, res) => {
-//res.send(req.body)
+// mainRoutes.post('/register', (req, res) => {
+// //res.send(req.body)
 
-const email = req.body.email;
-const password = req.body.password;
-const confirm_password = req.body.confirm_password;
+// const email = req.body.email;
+// const password = req.body.password;
+// const confirm_password = req.body.confirm_password;
 
-if(password !== confirm_password)
-{
-  return res.redirect('/register');
-}
+// if(password !== confirm_password)
+// {
+//   return res.redirect('/register');
+// }
 
-const emailData = {
-  Name: 'email',
-  Value: 'email'
-};
+// const emailData = {
+//   Name: 'email',
+//   Value: 'email'
+// };
 
-const emailAttribute = new AmazonCognitoIdentity.CognitoUserAttribute(emailData);
+// const emailAttribute = new AmazonCognitoIdentity.CognitoUserAttribute(emailData);
 
-userPool.signUp(email, password, [emailAttribute], null, (err, data) => {
-  if(err) {
-    return console.error(err);
-  }
-  res.send(data.user) 
+// userPool.signUp(email, password, [emailAttribute], null, (err, data) => {
+//   if(err) {
+//     return console.error(err);
+//   }
+//   res.send(data.user) 
   
-});
+// });
 
-});
+// });
 
 // GET login page
 mainRoutes.get('/login.html', (req, res) => {
