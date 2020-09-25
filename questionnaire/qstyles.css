@@ -1,0 +1,28 @@
+body{
+    font-size: medium;
+    font-family: Arial;
+    color: black;
+}
+.question {
+    font-weight: 600;
+}
+.answers {
+    margin-bottom: 20px;
+}
+.answers label {
+display: inline;
+}
+#submit {
+    font-family: Arial;
+    font-size: medium;
+    background-color: blanchedalmond;
+    color: rgb(49, 49, 114);
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover {
+    background-color: darkgrey;
+}
