@@ -64,7 +64,7 @@ mainRoutes.get('/editProfile', (req, res) => {
 
 
 mainRoutes.get('/userProfile', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'userProfile.html'))
+  res.sendFile(path.join(__dirname, 'views', 'userprofile.html'))
 })
 
 
