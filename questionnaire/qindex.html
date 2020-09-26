@@ -1,0 +1,116 @@
+<div id= "questionnaire">
+    <h1> Answers these questions related to your symptoms </h1>
+    <h2> Please answer honestly</h2>
+    <p>Note:Breathing and muscle aches not associated with physcial exersion</p>
+
+    <form id = "symptoms">
+
+        <question>Is there any reason to suggest you may be/are pregnant?</question>
+        <label><input type="radio", name="preg", value="cc1">Yes</label><br/>
+        <label><input type="radio", name="preg", value="cc2">No</label><br/>
+
+        <!--List of symptoms to select: combination will lead to possible diagnoses-->
+        <question> Please select those which apply to your current condition (last 24 hrs)</question>
+        <input type="checkbox", id="symptom1" ,name="s1" ,value="c1">
+        <label for="symptom1"> Cough</label><br>
+        <input type = "checkbox", id="symptom2", name="s2", value="c2">
+        <label for="symptom2" >Vomiting</label><br>
+        <input type = "checkbox", id="symptom3", name="s3", value="c3">
+        <label for="symptom3" >Nausea</label><br>
+        <input type = "checkbox", id="symptom4", name="s4", value="c4">
+        <label for="symptom4" >Diarrhoea</label><br>
+        <input type = "checkbox", id="symptom5", name="s5", value="c5">
+        <label for="symptom5" >Headache</label><br>
+        <input type = "checkbox", id="symptom6", name="s6", value="c6">
+        <label for="symptom6" >Fatigue</label><br>
+        <input type = "checkbox", id="symptom7", name="s7", value="c7">
+        <label for="symptom7" >Enlarged/Tender lymph nodes</label><br>
+        <input type = "checkbox", id="symptom8", name="s8", value="c8">
+        <label for="symptom8" >Inflamed throat</label><br>
+        <input type = "checkbox", id="symptom9", name="s9", value="c9">
+        <label for="symptom9" >Increased urination</label><br>
+
+
+        <question>Please indicate areas experiencing pain (if any)</question>
+        <input type = "checkbox", id="pain1", name="p1", value="pc1">
+        <label for="pain1" >Sinuses</label><br>
+        <input type = "checkbox", id="pain2", name="p2", value="pc2">
+        <label for="pain2" >Abdomen (general)</label><br>
+        <input type = "checkbox", id="pain3", name="p3", value="pc3">
+        <label for="pain3" >Muscle/s</label><br>
+        <input type = "checkbox", id="pain4", name="p4", value="pc4">
+        <label for="pain4" >Chest</label><br>
+        <input type = "checkbox", id="pain5", name="p5", value="pc5">
+        <label for="pain5" >Head/Neck</label><br>
+        <input type = "checkbox", id="pain6", name="p6", value="pc6">
+        <label for="pain6" >Jaw</label><br>
+        <input type = "checkbox", id="pain7", name="p7", value="pc7">
+        <label for="pain7" >Upper Back</label><br>
+        <input type = "checkbox", id="pain8", name="p8", value="pc8">
+        <label for="pain8" >Lower Back</label><br>
+        <input type = "checkbox", id="pain9", name="p9", value="pc9">
+        <label for="pain9" >Stomach</label><br>
+        <input type = "checkbox", id="pain10", name="p10", value="pc10">
+        <label for="pain10" >Joints</label><br>
+        <input type = "checkbox", id="pain11", name="p11", value="pc11">
+        <label for="pain11" >Extremities</label><br><br>
+
+        
+  
+        <!--Covid 19 Questions--> 
+        <question> Have you experienced chills/fever in the last 14 days? </question>
+        <!--Choices for the first question. Each input tag has the same name, cq1 in this case-->
+        <!--value is which answers the choice corresponds-->
+        <label><input type="radio", name="cq1", value="cc1">Yes </label><br/>
+        <label><input type="radio", name="cq1", value="cc2">No </label><br/>
+
+        <question>Have you had a sore throat &/or cough in the last 14 days?</question>
+        <label><input type="radio", name="cq2", value="cc1">Yes</label><br/>
+        <label><input type="radio", name="cq2", value="cc2">No</label><br/>
+
+        <question> Have you had any loss of taste &/or smell in the last 14 days?</question>
+        <label><input type="radio", name="cq3", value="cc1">Yes</label><br/>
+        <label><input type="radio", name="cq3", value="cc2">No</label><br/>
+
+        <question> Have you had any form of conjunctivitis (pink eye) in the last 14 days?</question>
+        <label><input type="radio", name="cq4", value="cc1">Yes</label><br/>
+        <label><input type="radio", name="cq4", value="cc2">No</label><br/>
+
+        <question> Have you experienced shortness of breath or chest pressure in the last 14 days?</question>
+        <label><input type="radio", name="cq5", value="cc1">Yes</label><br/>
+        <label><input type="radio", name="cq5", value="cc2">No</label><br/>
+
+        <question> Have you experienced difficulty breathing in the last 14 days?</question>
+        <label><input type="radio", name="cq4", value="cc1">Yes</label><br/>
+        <label><input type="radio", name="cq4", value="cc2">No</label><br/>
+
+        <!--Questions relating to chronic/specific conditions-->
+        <question> Please specify the particular/chronic conditon/s you wish to consult about/treat (if any)</question>
+        <input type="checkbox", id="condition1" ,name="con1" ,value="igot1">
+        <label for="condition1"> Diabetes</label><br>
+        <input type="checkbox", id="condition2" ,name="con2" ,value="igot2">
+        <label for="condition2"> Hyper/Hypotension</label><br>
+        <input type="checkbox", id="condition3" ,name="con3" ,value="igot3">
+        <label for="condition3"> Thyroid condition</label><br>
+        <input type="checkbox", id="condition4" ,name="con4" ,value="igot4">
+        <label for="condition4" >COPD</label><br>
+        <input type="checkbox", id="condition5" ,name="con5" ,value="igot5">
+        <label for="condition5"> Arthritis</label><br>
+        <input type="checkbox", id="condition6" ,name="con6" ,value="igot6">
+        <label for="condition6"> Liver disease</label><br>
+        <input type="checkbox", id="condition7" ,name="con7" ,value="igot7">
+        <label for="condition7"> Cancer</label><br>
+        <input type="checkbox", id="condition8" ,name="con8" ,value="igot8">
+        <label for="condition8"> Other/None of the above </label><br><br>
+
+        <question>If Other, please specify</question>
+        <label for="other">Condition:</label>
+        <input type="text", id="other", name="other"><br><br>
+
+        <button type="submit", id="submit", onclick="tabulateAnswers()"> Submit </button>
+
+    </form>
+
+    <div id="answer"> Possible Prognosis</div>
+</div>
+
