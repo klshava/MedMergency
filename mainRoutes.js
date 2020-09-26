@@ -50,7 +50,7 @@ mainRoutes.get('/services', (req, res) => {
 
 // GET Google Map  page
 mainRoutes.get('/map', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'map.html'))
+  res.sendFile(path.join(__dirname, 'views', 'new_map_.html'))
 })
 
 // const db = require('./models/db')

@@ -1,135 +1,114 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Custom Markers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      .map {
-        height: 700px;
-        width: 1500px;
-        margin-top: 100px;
-        margin-left: 200px;
-        margin-right: 200px;
-      }
-    </style>
-  </head>
+<html lang="en">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<head>
 
-  <body>
-    <h1>Nearest Hospitals</h1>
-    <div class="map" id="map" ></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(
-            document.getElementById('map'),
-            {center: new google.maps.LatLng(-26.1797239, 28.0323631), zoom: 13});
+    <header class="site-header">
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="/index" rel="home"><img class="d-block" src="public/images/DISCOVERY.PNG" alt="logo"></a>
+                            <a class="d-block" href="/index" rel="home"><img class="d-block" src="public/images/logo.png" alt="logo"></a>
+                        </div><!-- .site-branding -->
+  
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                                <li class="current-menu-item"><a href="/index">HOME</a></li>
+                                <li><a href="/about">ABOUT US</a></li>
+                                <li><a href="/#">SOME FUNCTION</a></li>
+                                <li><a href="/#">ANOTHER ONE</a></li>
+                                <li><a href="/logout">LOG OUT</a></li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+  
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+        </header>
 
-        var iconBase =
-            'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+       <!-- Custom CSS -->
+       <style>
+        header {
+            padding-top: 30px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    
+        header{margin-bottom:100px;}
+        </style>
 
-        var icons = {
-          hospital: {
-            icon: 'http://pradipdebnath.com/wp-content/uploads/2019/12/map-marker-icon.png'
-          },
-          library: {
-            icon: iconBase + 'library_maps.png'
-          },
-          info: {
-            icon: iconBase + 'info-i_maps.png'
-          }
-        };
-
-        var features = [
-          { // Charlotte Maxele Hospital
-            placeName: "Charlotte Maxele Hospital",
-            position: new google.maps.LatLng(-26.1760, 28.0439),
-            type: 'hospital'
-          }, { //  Netcare Milpark Hospital
-            placeName: "Netcare Milpark Hospital",
-            position: new google.maps.LatLng(-26.174673,28.016085),
-            type: 'hospital'
-          }, { // Netcare Park Lane Hospital
-            placeName: "Netcare Park Lane Hospital",
-            position: new google.maps.LatLng(-26.174763, 28.0151887),
-            type: 'hospital'
-          }, { // Nelson Mandela Children's Hospital (NMCH)
-          placeName: "Nelson Mandela Children's Hospital (NMCH)",
-          position: new google.maps.LatLng(26.1045, 28.0221),
-            type: 'hospital'
-          }, { // Life Brenthurst Clinic
-            placeName: "Life Brenthurst Clinic",
-            position: new google.maps.LatLng(-26.18431, 28.04617),
-            type: 'hospital'
-          }, { // Netcare Garden City Hospital
-            placeName: "Netcare Garden City Hospital",
-            position: new google.maps.LatLng(-26.197519,28.0018929),
-            type: 'hospital'
-          }, { //Netcare Linksfield Hospital
-            placeName: "Netcare Linksfield Hospital",
-            position: new google.maps.LatLng(-26.159665,28.0936523),
-            type: 'hospital'
-          }, { // Wits Donald Gordon Medical Centre
-            placeName: "Wits Donald Gordon Medical Centre",
-            position: new google.maps.LatLng(-26.1789903,28.0322056),
-            type: 'hospital'
-          }, { // Netcare Rosebank Hospital
-            placeName: "Netcare Rosebank Hospital",
-            position: new google.maps.LatLng(-26.1463663,28.0368918),
-            type: 'hospital'
-          }, { // Rahima Moosa Mother & Child Hospital
-            placeName: "Rahima Moosa Mother & Child Hospital",
-            position: new google.maps.LatLng(-26.1883178,27.97115781),
-            type: 'hospital'
-          }, { // Helen Joseph Hospital
-            placeName: "Helen Joseph Hospital",
-            position: new google.maps.LatLng(-26.1847188,27.9884328),
-            type: 'hospital'
-          }, { // Life Brenthurst Clinic - Maternity Ward
-            placeName: "Life Brenthurst Clinic - Maternity Ward",
-            position: new google.maps.LatLng(-26.1843052,28.0439813),
-            type: 'hospital'
-          }, { // Clinic Health Group Ltd.
-            placeName: "Clinic Health Group Ltd.",
-            position: new google.maps.LatLng(-26.1245652,28.0329613),
-            type: 'hospital'
-          }, { // Netcare Mulbarton Hospital
-            placeName: "Netcare Mulbarton Hospital",
-            position: new google.maps.LatLng(-26.29797,28.0509241),
-            type: 'hospital'
-          }, {
-            position: new google.maps.LatLng(),
-            type: 'hospital'
-          }, {
-            position: new google.maps.LatLng(),
-            type: 'hospital'
-          }, {
-            position: new google.maps.LatLng(),
-            type: 'hospital'
-          }, {
-            position: new google.maps.LatLng(),
-            type: 'hospital'
-          }, {
-            position: new google.maps.LatLng(),
-            type: 'hospital'
-          }
-        ];
-
-        // Create markers.
-        for (var i = 0; i < features.length; i++) {
-          var contentString = '<h3>' + features[i].placeName + '<h3>';
-          var marker = new google.maps.Marker({
-            position: features[i].position,
-            icon: icons[features[i].type].icon,
-            map: map
-          });
-        };
-      }
-    </script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7EnsMkqdqOjzHUn909x6eUoKmVjVWhs&callback=initMap">
-    </script>
+<footer class="site-footer">
+    <div class="footer-widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="foot-about">
+                        <h2><a href="#"><img src="public/images/DISCOVERY.PNG" alt=""></a></h2>
+                        <h2><a href="#"><img src="public/images/logo.png" alt=""></a></h2>
+  
+                
+                    </div><!-- .foot-about -->
+                </div><!-- .col -->
+  
+                <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                    <div class="foot-contact">
+                        <h2>Contact</h2>
+  
+                        <ul class="p-0 m-0">
+                            <li><span>Addtress:</span>1 Discovery Place, Sandton, South Africa</li>
+                            <li><span>Phone:</span>+27 (01)1 529 7247</li>
+                            <li><span>Email:</span>healthinfo@discovery.co.za</li>
+                        </ul>
+                    </div>
+                </div><!-- .col -->
+  
+                <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                    <div class="foot-links">
+                        <h2>Usefull Links</h2>
+  
+                        <ul class="p-0 m-0">
+                            <li><a href="/index">Home</a></li>
+                            <li><a href="/about">About us</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/terms">Terms</a></li>
+                           
+                        </ul>
+                      
+                    </div><!-- .foot-links -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+        <div class='container'>
+            <ul>
+                <a href="https://www.facebook.com/discoverysouthafrica/" target="_blank" class="fa fa-facebook"></a>
+                <a href="http://www.linkedin.com/company/discovery-limited" target="_blank"  class=" fa fa-linkedin"></a>
+                <a href="https://twitter.com/Discovery_SA" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.youtube.com/user/DiscoverySA" target="_blank" class="fa fa-youtube"></a>
+                <a href="https://za.pinterest.com/vitalitysa/" target="_blank" class="fa fa-pinterest"></a>
+                <a href="https://www.instagram.com/discovery_sa/" target="_blank"  class="fa fa-instagram"></a>
+            </ul>
+        </div>
+    </div><!-- .footer-widgets -->
+  </footer><!-- .site-footer -->
+  <script type='text/javascript' src='public/js/jquery.js'></script>
+  <script type='text/javascript' src='public/js/jquery.collapsible.min.js'></script>
+  <script type='text/javascript' src='public/js/swiper.min.js'></script>
+  <script type='text/javascript' src='public/js/jquery.countdown.min.js'></script>
+  <script type='text/javascript' src='public/js/circle-progress.min.js'></script>
+  <script type='text/javascript' src='public/js/jquery.countTo.min.js'></script>
+  <script type='text/javascript' src='public/js/jquery.barfiller.js'></script>
+  <script type='text/javascript' src='public/js/custom.js'></script>
   </body>
-</html>
+  </html>
