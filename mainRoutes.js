@@ -56,6 +56,69 @@ mainRoutes.get('/services', (req, res) => {
 mainRoutes.get('/forum', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forum.html'))
 })
+// GET Google Map  page
+mainRoutes.get('/location-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'new_map_.html'))
+})
+
+// GET Google Map cardio page
+mainRoutes.get('/cardio-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'cardio_map.html'))
+})
+
+
+// GET Google Map dental  page
+mainRoutes.get('/dental-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'dental_map.html'))
+})
+
+// GET Google Map gastro page
+mainRoutes.get('/gastro-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'gastro_map.html'))
+})
+
+// GET Google Map medlab page
+mainRoutes.get('/medlab-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'medlab_map.html'))
+})
+
+// GET Google Map neuro  page
+mainRoutes.get('/neuro-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'neuro_map.html'))
+})
+
+// GET Google Map opthal page
+mainRoutes.get('/opthal-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'opthal_map.html'))
+})
+
+// GET Google Map ortho page
+mainRoutes.get('/ortho-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'ortho_map.html'))
+})
+
+// GET Google Map pediatry page
+mainRoutes.get('/pediatry-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'pediatry_map.html'))
+})
+
+// GET Google Map  page
+mainRoutes.get('/surgery-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'surgery_map.html'))
+})
+
+// GET Google Map  page
+mainRoutes.get('/pharma-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'pharmacies_map.html'))
+})
+
+
+
+
+
+mainRoutes.get('/questionnaire', (req, res) => {
+  res.sendFile(path.join(__dirname, 'questionnaire', 'qindex.html'))
+})
 
 mainRoutes.get('/cardiogram', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
