@@ -56,28 +56,7 @@
       </header>
 
 
-<form method="POST" action='/api/user/forum'>
-        <p class="full">
-          <div class="form-row">
-          <label for="username" class="col-sm-2 col-form-label"> <b> </b></label>
-         <div class="col-md-4 mb-1">
-          <input type="text"class="form-control" name="username" id="username"  placeholder="What question do you have?"  required>
-        </div>
-        <div class="col-md-5 mb-1">
-            <button onclick="myFunction()">POST</button>
-            <!-- <button type="submit" id="forum" value="forum" name="forum" class="btn btn-primary">POST</button> -->
-            <script>
-                function myFunction() {
-                  var h = document.createElement("H1");
-                  var t = document.createTextNode();
-                  h.appendChild(t);
-                  document.body.appendChild(h);
-                }
-                </script>
-        </div>
-       </div>
-        </p>
-      </form> 
+
 
      
 
@@ -105,6 +84,34 @@
                             </ul>
                         </div>
                     </div><!-- .col -->
+
+
+
+
+
+                    <form>
+                        <p class="full">
+                          <div class="form-row">
+                          <label for="username" class="col-sm-2 col-form-label"> <b> </b></label>
+                         <div class="col-md-4 mb-1">
+                          <input type="text"class="form-control" name="username" id="username"  placeholder="What question do you have?"  required>
+                        </div>
+                        <div class="col-md-5 mb-1">
+                            <button type="button" id="addButton">POST</button>
+                            <!-- <button type="submit" id="forum" value="forum" name="forum" class="btn btn-primary">POST</button> -->
+                            <script>
+                                let button = document.getElementById('addButton')
+                                  button.addEventListener('click', function () {
+                                  let h = document.createElement("H1")
+                                  let t = document.createTextNode(document.getElementById("username").value)
+                                  h.appendChild(t)
+                                  document.body.appendChild(h)
+                                },false)
+                            </script>
+                        </div>
+                       </div>
+                        </p>
+                      </form> 
       
                     <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
                         <div class="foot-links">
@@ -122,6 +129,15 @@
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
+
+
+           
+
+
+
+
+
+
             <div class='container'>
                 <ul>
                     <a href="https://www.facebook.com/discoverysouthafrica/" target="_blank" class="fa fa-facebook"></a>
@@ -132,6 +148,9 @@
                     <a href="https://www.instagram.com/discovery_sa/" target="_blank"  class="fa fa-instagram"></a>
                 </ul>
             </div>
+
+
+
         </div><!-- .footer-widgets -->
       </footer><!-- .site-footer -->
       <script type='text/javascript' src='public/js/jquery.js'></script>
