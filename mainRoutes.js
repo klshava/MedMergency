@@ -33,6 +33,11 @@ mainRoutes.get('/terms', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'terms.html'))
 })
 
+// GET T&C page
+mainRoutes.get('/chatbot', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'chatbox.html'))
+})
+
 // GET main page
 mainRoutes.get('/main', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'main.html'))
@@ -56,17 +61,13 @@ mainRoutes.get('/cardiogram', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
 })
 
-
-
 mainRoutes.get('/editProfile', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'editProfile.html'))
 })
 
-
 mainRoutes.get('/userProfile', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'userprofile.html'))
 })
-
 
 // const db = require('./models/db')
 db.sequelize.sync()
@@ -95,5 +96,3 @@ mainRoutes.get('/changepassword', (req, res) => {
 
 mainRoutes.use('/api/user', userRouter)
 module.exports = mainRoutes
-
-
