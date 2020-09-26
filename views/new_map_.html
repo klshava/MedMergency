@@ -44,45 +44,59 @@
 
         var features = [
           { // Charlotte Maxele Hospital
+            placeName: "Charlotte Maxele Hospital",
             position: new google.maps.LatLng(-26.1760, 28.0439),
             type: 'hospital'
           }, { //  Netcare Milpark Hospital
+            placeName: "Netcare Milpark Hospital",
             position: new google.maps.LatLng(-26.174673,28.016085),
             type: 'hospital'
           }, { // Netcare Park Lane Hospital
+            placeName: "Netcare Park Lane Hospital",
             position: new google.maps.LatLng(-26.174763, 28.0151887),
             type: 'hospital'
           }, { // Nelson Mandela Children's Hospital (NMCH)
-            position: new google.maps.LatLng(26.1045, 28.0221),
+          placeName: "Nelson Mandela Children's Hospital (NMCH)",
+          position: new google.maps.LatLng(26.1045, 28.0221),
             type: 'hospital'
           }, { // Life Brenthurst Clinic
+            placeName: "Life Brenthurst Clinic",
             position: new google.maps.LatLng(-26.18431, 28.04617),
             type: 'hospital'
           }, { // Netcare Garden City Hospital
+            placeName: "Netcare Garden City Hospital",
             position: new google.maps.LatLng(-26.197519,28.0018929),
             type: 'hospital'
           }, { //Netcare Linksfield Hospital
+            placeName: "Netcare Linksfield Hospital",
             position: new google.maps.LatLng(-26.159665,28.0936523),
             type: 'hospital'
           }, { // Wits Donald Gordon Medical Centre
+            placeName: "Wits Donald Gordon Medical Centre",
             position: new google.maps.LatLng(-26.1789903,28.0322056),
             type: 'hospital'
           }, { // Netcare Rosebank Hospital
+            placeName: "Netcare Rosebank Hospital",
             position: new google.maps.LatLng(-26.1463663,28.0368918),
             type: 'hospital'
           }, { // Rahima Moosa Mother & Child Hospital
+            placeName: "Rahima Moosa Mother & Child Hospital",
             position: new google.maps.LatLng(-26.1883178,27.97115781),
             type: 'hospital'
           }, { // Helen Joseph Hospital
+            placeName: "Helen Joseph Hospital",
             position: new google.maps.LatLng(-26.1847188,27.9884328),
             type: 'hospital'
           }, { // Life Brenthurst Clinic - Maternity Ward
+            placeName: "Life Brenthurst Clinic - Maternity Ward",
             position: new google.maps.LatLng(-26.1843052,28.0439813),
             type: 'hospital'
           }, { // Clinic Health Group Ltd.
+            placeName: "Clinic Health Group Ltd.",
             position: new google.maps.LatLng(-26.1245652,28.0329613),
             type: 'hospital'
           }, { // Netcare Mulbarton Hospital
+            placeName: "Netcare Mulbarton Hospital",
             position: new google.maps.LatLng(-26.29797,28.0509241),
             type: 'hospital'
           }, {
@@ -105,6 +119,7 @@
 
         // Create markers.
         for (var i = 0; i < features.length; i++) {
+          var contentString = '<h3>' + features[i].placeName + '<h3>';
           var marker = new google.maps.Marker({
             position: features[i].position,
             icon: icons[features[i].type].icon,
