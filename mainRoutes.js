@@ -48,8 +48,24 @@ mainRoutes.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'services.html'))
 })
 
+mainRoutes.get('/forum', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'forum.html'))
+})
+
+mainRoutes.get('/cardiogram', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
+})
 
 
+
+mainRoutes.get('/editProfile', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'editProfile.html'))
+})
+
+
+mainRoutes.get('/userProfile', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'userProfile.html'))
+})
 
 
 // const db = require('./models/db')
