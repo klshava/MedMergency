@@ -56,6 +56,10 @@ mainRoutes.get('/services', (req, res) => {
 mainRoutes.get('/forum', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forum.html'))
 })
+// GET Google Map  page
+mainRoutes.get('/map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'new_map_.html'))
+})
 
 mainRoutes.get('/questionnaire', (req, res) => {
   res.sendFile(path.join(__dirname, 'questionnaire', 'qindex.html'))
