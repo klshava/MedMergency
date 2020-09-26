@@ -5,7 +5,7 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   
 <script type ="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7EnsMkqdqOjzHUn909x6eUoKmVjVWhs&callback=initialise">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7EnsMkqdqOjzHUn909x6eUoKmVjVWhs&callback=initialize">
   </script>
   <script>
      var map;
@@ -20,12 +20,12 @@
              center:center,
              zoom:13
          });
-          request ={
+            /*request ={
              location:center,
              radius:10000,
-             types:['cafe']
+             types:['school']
              
-             };
+             };*/
              infowindow = new google.maps.InfoWindow();
               service = new google.maps.placesService(map);
              service.nearbySearch(request, callback);
@@ -36,8 +36,8 @@
 
     request={
         location:event.latLng,
-        radius:10000000000,
-        types:['hospitals']
+        radius:5000,
+        types:['school']
     };
 
     service.nearbySearch(request, callback);

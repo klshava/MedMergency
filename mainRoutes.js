@@ -93,8 +93,8 @@ mainRoutes.get('/opthal-map', (req, res) => {
 })
 
 // GET Google Map ortho page
-mainRoutes.get('/ortho-map', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'ortho_map.html'))
+mainRoutes.get('/orthop-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'orthop_map.html'))
 })
 
 // GET Google Map pediatry page
