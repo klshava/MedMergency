@@ -5,7 +5,7 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   
 <script type ="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBgcPJBuDsyZxhTGAVauTkGaenDQgPZhR4">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7EnsMkqdqOjzHUn909x6eUoKmVjVWhs&callback=initialise">
   </script>
   <script>
      var map;
@@ -15,7 +15,7 @@
      var markers=[];
 
      function initialize(){
-         var center= new google.maps.LatLng(26.2041,-28.0473);
+         var center= new google.maps.LatLng(-26.2041,28.0473);
          map = new google.maps.Map(document.getElementById('map'),{
              center:center,
              zoom:13
@@ -23,7 +23,7 @@
           request ={
              location:center,
              radius:10000,
-             types:['hospital']
+             types:['cafe']
              
              };
              infowindow = new google.maps.InfoWindow();
@@ -36,9 +36,10 @@
 
     request={
         location:event.latLng,
-        radius:10000,
+        radius:10000000000,
         types:['hospitals']
     };
+
     service.nearbySearch(request, callback);
      })
 
@@ -53,16 +54,17 @@
 
      function createMarker(place){
          var placeLoc= place.geometry.location;
-          marker = new google.maps.Market({
+         var marker = new google.maps.Market({
              map:map,
              position:place.geometry.location
          });
          google.maps.event.addListener(marker,'click', function(){
-           infowindow.setContent(place.name);
-           infowindow.open(map, this);  
+           infoWindow.setContent(place.name);
+           infoWindow.open(map, this);  
          });
          return marker;
      }
+
      function clearResults(markers){
          for(var m in markers){
              markers[m].setMap(null)
@@ -75,7 +77,7 @@
   <style>html,body,#map{
       height:100%;
       margin: 0px;
-      padding: 0px
+      padding: 0px;
     }
   </style>
 </head>
