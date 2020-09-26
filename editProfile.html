@@ -1,42 +1,10 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!DOCTYPE html>
+<html lang="en">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Edit User Profile</title>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-    <!-- Bootstrap Core CSS -->
-<!--     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-
-    .othertop{margin-top:10px;}
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -45,313 +13,361 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper.min.css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
+    <script src="js/custom.js"></script>
+
+    <title>Edit User Profile</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+    <!-- Bootstrap Core CSS -->
+<!--     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+
+
 </head>
-
 <body>
+    <header class="site-header">
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/DISCOVERY.PNG" alt="logo"></a>
+                       <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo.png" alt="logo"></a>
+                           </div><!-- .site-branding -->
 
-   <div class="container">
-<div class="row">
-<div class="col-md-10 ">
-<form class="form-horizontal">
-<fieldset>
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                                <li class="current-menu-item"><a href="index.html">HOME</a></li>
+                                <li><a href="about.html">ABOUT US</a></li>
+                                <li><a href="services.html">SERVICES</a></li>
+                                <li><a href="register.html">REGISTER</a></li>
+                                <li><a href="login.html">LOG IN</a></li>
 
-<!-- Form Name -->
-<legend>User Profile</legend>
+                            </ul>
+                        </nav><!-- .site-navigation -->
 
-<!-- Text input-->
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+
+    </header>
+
+       <!-- Custom CSS -->
+       <style>
+        header {
+            padding-top: 30px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    
+        header{margin-bottom:100px;}
+        </style>
 
 
 
+    <div class="container">
+        <div class="row">
+        <div class="col-md-10">
+        <form class="form-horizontal">
+        <fieldset>
+        
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="First Name">First Name</label> 
-  <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-       <input id="First Name" name="First Name" type="text" placeholder="Jerry" class="form-control input-md">
-      </div>
-  </div>
-</div>
-
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Last Name">Last Name</label> 
-    <div class="col-md-4">
-   <div class="input-group">
-         <div class="input-group-addon">
-          <i class="fa fa-user">
-          </i>
-         </div>
-         <input id="Last Name" name="Last Name" type="text" placeholder="Hlongwane" class="form-control input-md">
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="First Name">First Name</label> 
+        <div class="col-md-4">
+       <div class="input-group">
+             <div class="input-group-addon">
+              <i class="fa fa-user">
+              </i>
+             </div>
+             <input id="First Name" name="First Name" type="text" placeholder="Jerry" class="form-control input-md">
+            </div>
         </div>
-    </div>
-  </div>
-
-<!-- File Button --> 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
-  <div class="col-md-4">
-    <input id="Upload photo" name="Upload photo" class="input-file" type="file">
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Date Of Birth">Date Of Birth</label>  
-  <div class="col-md-4">
-
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-birthday-cake"></i>
-        
-       </div>
-       <input id="Date Of Birth" name="Date Of Birth" type="text" placeholder="Date Of Birth" class="form-control input-md">
       </div>
-  
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Citizenship No.">Citizenship No.</label>  
-    <div class="col-md-4">
-    <div class="input-group">
-         <div class="input-group-addon">
-       <i class="fa fa-sticky-note-o"></i>
-          
-         </div>
-     <input id="Citizenship No." name="Identity / Passport Number" type="text" placeholder="931072927391739291" class="form-control input-md">
       
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="Last Name">Last Name</label> 
+          <div class="col-md-4">
+         <div class="input-group">
+               <div class="input-group-addon">
+                <i class="fa fa-user">
+                </i>
+               </div>
+               <input id="Last Name" name="Last Name" type="text" placeholder="Hlongwane" class="form-control input-md">
+              </div>
+          </div>
         </div>
-   
       
-    </div>
-  </div>
-
-
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Gender">Gender</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="Gender-0">
-      <input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
-      Male
-    </label> 
-    <label class="radio-inline" for="Gender-1">
-      <input type="radio" name="Gender" id="Gender-1" value="2">
-      Female
-    </label> 
-    <label class="radio-inline" for="Gender-2">
-      <input type="radio" name="Gender" id="Gender-2" value="3">
-      Other
-    </label>
-  </div>
-</div>
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Marital Status:</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      Married
-    </label> 
-    <label class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      Unmarried
-    </label>
-  </div>
-</div>
-
-<!-- Text input-->
-<!-- <div class="form-group">
-  <label class="col-md-4 control-label" for="Temporary Address">Temporary Address</label>  
-  <div class="col-md-4">
-
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-home" style="font-size:20px;"></i>
+      <!-- File Button --> 
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
+        <div class="col-md-4">
+          <input id="Upload photo" name="Upload photo" class="input-file" type="file">
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Date Of Birth">Date Of Birth</label>  
+        <div class="col-md-4">
+      
+        <div class="input-group">
+             <div class="input-group-addon">
+           <i class="fa fa-birthday-cake"></i>
+              
+             </div>
+             <input id="Date Of Birth" name="Date Of Birth" type="text" placeholder="Date Of Birth" class="form-control input-md">
+            </div>
         
-       </div>
- <input id="Temporary Address" name="Temporary Address" type="text" placeholder="Temporary Address" class="form-control input-md">
-      </div>
- 
-    
-  </div>
-</div>
- -->
-<div class="form-group">
-  <label class="col-md-4 control-label col-xs-12" for="Physical Address">Physical Address</label>  
-  <div class="col-md-4">
-  <input id="Physical Address" name="Physical Address" type="text" placeholder="562 Discovery Road" class="form-control input-md ">
-  </div>
-
-  <div class="col-md-2 col-xs-4">
-  </div>
-
-  
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Physical Address"></label>  
-  <div class="col-md-4">
-  <input id="Physical Address" name="Physical Address" type="text" placeholder="Vitality Estate, Johannesburg, 1610" class="form-control input-md ">
-  
-  </div>
-
-  
-
-  
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Occupation">Occupation</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-briefcase"></i>
-        
-       </div>
-      <input id="Occupation" name="Occupation" type="text" placeholder="Occupation" class="form-control input-md">
-      </div>
-  
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Allergies">Allergies</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-     <input id="Allergies" name="Allergies" type="text" placeholder="Peanuts" class="form-control input-md">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Dietary Requirements">Dietary Requirements</label>  
-    <div class="col-md-4">
-    <div class="input-group">
-       <input id="Dietary Requirements" name="Dietary Requirements" type="text" placeholder="Vegan" class="form-control input-md">
-      </div>
-    </div>
-  </div>
-
-<!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Chronic Conditions">Chronic Conditions</label>  
-    <div class="col-md-4">
-    <div class="input-group">
-       <input id="Chronic Conditions" name="Chronic Conditions" type="text" placeholder="Diabetes" class="form-control input-md">
-      </div>
-    </div>
-  </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Phone number ">Phone number </label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-phone"></i>
-        
-       </div>
-    <input id="Phone number " name="Phone number " type="text" placeholder="098-461-2134" class="form-control input-md">
-  </div>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Home number ">Home number </label>  
-    <div class="col-md-4">
-    <div class="input-group">
-         <div class="input-group-addon">
-       <i class="fa fa-phone"></i>
           
-         </div>
-      <input id="Home number " name="Phone number " type="text" placeholder="(011)-456-9861" class="form-control input-md">
-    </div>
-    </div>
-  </div>
-
-  <!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Work number ">Work number </label>  
-    <div class="col-md-4">
-    <div class="input-group">
-         <div class="input-group-addon">
-       <i class="fa fa-phone"></i>
-          
-         </div>
-      <input id="Work number " name="Work number " type="text" placeholder="(011)-567-9171 " class="form-control input-md">
-    </div>
-    </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-envelope-o"></i>
-        
-       </div>
-    <input id="Email Address" name="Email Address" type="text" placeholder="Email Address" class="form-control input-md">
-    
+        </div>
       </div>
-  
-  </div>
-</div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="Citizenship No.">Citizenship No.</label>  
+          <div class="col-md-4">
+          <div class="input-group">
+               <div class="input-group-addon">
+             <i class="fa fa-sticky-note-o"></i>
+                
+               </div>
+           <input id="Citizenship No." name="Identity / Passport Number" type="text" placeholder="931072927391739291" class="form-control input-md">
+            
+              </div>
+         
+            
+          </div>
+        </div>
+      
+      
+      
+      <!-- Multiple Radios (inline) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Gender">Gender</label>
+        <div class="col-md-4"> 
+          <label class="radio-inline" for="Gender-0">
+            <input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
+            Male
+          </label> 
+          <label class="radio-inline" for="Gender-1">
+            <input type="radio" name="Gender" id="Gender-1" value="2">
+            Female
+          </label> 
+          <label class="radio-inline" for="Gender-2">
+            <input type="radio" name="Gender" id="Gender-2" value="3">
+            Other
+          </label>
+        </div>
+      </div>
+      
+      <!-- Multiple Radios (inline) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="radios">Marital Status:</label>
+        <div class="col-md-4"> 
+          <label class="radio-inline" for="radios-0">
+            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+            Married
+          </label> 
+          <label class="radio-inline" for="radios-1">
+            <input type="radio" name="radios" id="radios-1" value="2">
+            Unmarried
+          </label>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <!-- <div class="form-group">
+        <label class="col-md-4 control-label" for="Temporary Address">Temporary Address</label>  
+        <div class="col-md-4">
+      
+        <div class="input-group">
+             <div class="input-group-addon">
+           <i class="fa fa-home" style="font-size:20px;"></i>
+              
+             </div>
+       <input id="Temporary Address" name="Temporary Address" type="text" placeholder="Temporary Address" class="form-control input-md">
+            </div>
+       
+          
+        </div>
+      </div>
+       -->
+      <div class="form-group">
+        <label class="col-md-4 control-label col-xs-12" for="Physical Address">Physical Address</label>  
+        <div class="col-md-4">
+        <input id="Physical Address" name="Physical Address" type="text" placeholder="562 Discovery Road" class="form-control input-md ">
+        </div>
+      
+        <div class="col-md-2 col-xs-4">
+        </div>
+      
+        
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Physical Address"></label>  
+        <div class="col-md-4">
+        <input id="Physical Address" name="Physical Address" type="text" placeholder="Vitality Estate, Johannesburg, 1610" class="form-control input-md ">
+        
+        </div>
+      
+        
+      
+        
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Occupation">Occupation</label>  
+        <div class="col-md-4">
+        <div class="input-group">
+             <div class="input-group-addon">
+           <i class="fa fa-briefcase"></i>
+              
+             </div>
+            <input id="Occupation" name="Occupation" type="text" placeholder="Occupation" class="form-control input-md">
+            </div>
+        
+          
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Allergies">Allergies</label>  
+        <div class="col-md-4">
+        <div class="input-group">
+           <input id="Allergies" name="Allergies" type="text" placeholder="Peanuts" class="form-control input-md">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="Dietary Requirements">Dietary Requirements</label>  
+          <div class="col-md-4">
+          <div class="input-group">
+             <input id="Dietary Requirements" name="Dietary Requirements" type="text" placeholder="Vegan" class="form-control input-md">
+            </div>
+          </div>
+        </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="Chronic Conditions">Chronic Conditions</label>  
+          <div class="col-md-4">
+          <div class="input-group">
+             <input id="Chronic Conditions" name="Chronic Conditions" type="text" placeholder="Diabetes" class="form-control input-md">
+            </div>
+          </div>
+        </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Phone number ">Phone number </label>  
+        <div class="col-md-4">
+        <div class="input-group">
+             <div class="input-group-addon">
+           <i class="fa fa-phone"></i>
+              
+             </div>
+          <input id="Phone number " name="Phone number " type="text" placeholder="098-461-2134" class="form-control input-md">
+        </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="Home number ">Home number </label>  
+          <div class="col-md-4">
+          <div class="input-group">
+               <div class="input-group-addon">
+             <i class="fa fa-phone"></i>
+                
+               </div>
+            <input id="Home number " name="Phone number " type="text" placeholder="(011)-456-9861" class="form-control input-md">
+          </div>
+          </div>
+        </div>
+      
+        <!-- Text input-->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="Work number ">Work number </label>  
+          <div class="col-md-4">
+          <div class="input-group">
+               <div class="input-group-addon">
+             <i class="fa fa-phone"></i>
+                
+               </div>
+            <input id="Work number " name="Work number " type="text" placeholder="(011)-567-9171 " class="form-control input-md">
+          </div>
+          </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
+        <div class="col-md-4">
+        <div class="input-group">
+             <div class="input-group-addon">
+           <i class="fa fa-envelope-o"></i>
+              
+             </div>
+          <input id="Email Address" name="Email Address" type="text" placeholder="Email Address" class="form-control input-md">
+          
+            </div>
+        
+        </div>
+      </div>
+      
+      <!-- Textarea -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Medications">Medications</label>
+        <div class="col-md-4">                     
+          <textarea class="form-control" rows="10"  id="Medication" placeholder="Asthavent ecohaler 200 dose" name=""></textarea>
+        </div>
+      </div>
+      
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" ></label>  
+        <div class="col-md-4">
+        <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Update Profile</a>
+        </div>
+      </div>
+      
+      </fieldset>
+      </form>
+      </div>
 
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Medications">Medications</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" rows="10"  id="Medication" placeholder="Asthavent ecohaler 200 dose" name=""></textarea>
-  </div>
-</div>
-
-
-<div class="form-group">
-  <label class="col-md-4 control-label" ></label>  
-  <div class="col-md-4">
-  <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Update Profile</a>
-  </div>
-</div>
-
-</fieldset>
-</form>
-</div>
-<div class="col-md-2 hidden-xs">
-<img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
-  </div>
-
-
-</div>
-   </div>
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+      <!--
+      <div class="col-md-2 hidden-xs">
+      <img src="images/team-2.jpg" class="img-responsive img-thumbnail ">
+      </div>
+      -->
+      
+      
+      </div>
+         </div>
+          <!-- jQuery Version 1.11.1 -->
+          <script src="js/jquery.js"></script>
+      
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
