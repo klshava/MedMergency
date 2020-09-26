@@ -34,7 +34,7 @@ mainRoutes.get('/terms', (req, res) => {
 })
 
 // GET T&C page
-mainRoutes.get('/chatbot', (req, res) => {
+mainRoutes.get('/chatbot',ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'chatbox.html'))
 })
 
@@ -57,15 +57,15 @@ mainRoutes.get('/forum', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forum.html'))
 })
 
-mainRoutes.get('/cardiogram', (req, res) => {
+mainRoutes.get('/cardiogram', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
 })
 
-mainRoutes.get('/editProfile', (req, res) => {
+mainRoutes.get('/editProfile', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'editProfile.html'))
 })
 
-mainRoutes.get('/userProfile', (req, res) => {
+mainRoutes.get('/userProfile', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'userProfile.html'))
 })
 

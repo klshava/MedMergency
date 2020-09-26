@@ -2,75 +2,82 @@
 <html>
 <head>
 <title>Chatbot</title>
-<link rel="stylesheet" href="public/css/proStyle.css">
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="public/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="public/css/swiper.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="public/css/swiper.min.css">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="public/style.css">
+<!-- Styles -->
+<link rel="stylesheet" href="public/style.css">
 
-    <script src="public/js/custom.js"></script>
+<!-- <script src="public/js/custom.js"></script> -->
 
-    <title>Edit User Profile</title>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-    <!-- Bootstrap Core CSS -->
-<!--     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-
-
-
+<script type="text/javascript" src="public/js/main.js"></script>
 
 </head>
-<body>
-    <header class="site-header">
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                            <a class="d-block" href="/index" rel="home"><img class="d-block" src="public/images/DISCOVERY.PNG" alt="logo"></a>
-                       <a class="d-block" href="/index" rel="home"><img class="d-block" src="public/images/logo.png" alt="logo"></a>
-                           </div><!-- .site-branding -->
+<body class="single-page">
+	<header class="site-header">
+		<div class="nav-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+						<div class="site-branding d-flex align-items-center">
+							<a class="d-block" href="/index" rel="home"><img class="d-block" src="public/images/DISCOVERY.PNG" alt="logo"></a>
+							<a class="d-block" href="/index" rel="home"><img class="d-block" src="public/images/logo.png" alt="logo"></a>
+						</div><!-- .site-branding -->
+  
+						<nav class="site-navigation d-flex justify-content-end align-items-center">
+							<ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+								<li class="current-menu-item"><a href="/main">HOME</a></li>
+								<!-- <li><a href="/about">ABOUT US</a></li>
+								<li><a href="/#">SOME FUNCTION</a></li>
+								<li><a href="/#">ANOTHER ONE</a></li> -->
+								<li><a href="/logout">LOG OUT</a></li>
+							</ul>
+						</nav><!-- .site-navigation -->
+  
+						<div class="hamburger-menu d-lg-none">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div><!-- .hamburger-menu -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .nav-bar -->
+		</header>
 
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
-                                <li class="current-menu-item"><a href="/main">HOME</a></li>
-                                <li><a href="/about">ABOUT US</a></li>
-                                <li><a href="/services">SERVICES</a></li>
-                                <li><a href="/register">REGISTER</a></li>
-                                <li><a href="/login">LOG IN</a></li>
-                                
+		<div>
+			<div class="row">
+                
+				<div class="col-12 col-md-6 col-lg-4">
+					<h2>Speak to a doctor: </h2>
+				</div>
 
-                            </ul>
-                        </nav><!-- .site-navigation -->
+				<div class="col-12 col-md-6 col-lg-4">
+			<div id="main">
+				<div><input id="input" type="text" placeholder="Say something..." autocomplete="off"/></div>
+			</div>
+			</div>
 
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .nav-bar -->
+			
 
-    </header>
-<div id="main">
-	<div><input id="input" type="text" placeholder="Say something..." autocomplete="off"/></div>
-</div>
-<script type="text/javascript" src="/main.js"></script>
+			<div class="col-12 col-md-6 col-lg-4"></div>
+
+		</div>
+
+
+
+
+
 <footer class="site-footer">
 	<div class="footer-widgets">
 		<div class="container">
@@ -124,13 +131,13 @@
 		</div>
 	</div><!-- .footer-widgets -->
 </footer><!-- .site-footer -->
-<script type='text/javascript' src='public/js/jquery.js'></script>
+<!-- <script type='text/javascript' src='public/js/jquery.js'></script>
 <script type='text/javascript' src='public/js/jquery.collapsible.min.js'></script>
 <script type='text/javascript' src='public/js/swiper.min.js'></script>
 <script type='text/javascript' src='public/js/jquery.countdown.min.js'></script>
 <script type='text/javascript' src='public/js/circle-progress.min.js'></script>
 <script type='text/javascript' src='public/js/jquery.countTo.min.js'></script>
 <script type='text/javascript' src='public/js/jquery.barfiller.js'></script>
-<script type='text/javascript' src='public/js/custom.js'></script>
+<script type='text/javascript' src='public/js/custom.js'></script> -->
 </body>
 </html>
