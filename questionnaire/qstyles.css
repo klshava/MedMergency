@@ -1,16 +1,30 @@
 body{
-    font-size: medium;
     font-family: Arial;
     color: black;
+    background-color: royalblue; 
 }
 .question {
-    font-weight: 600;
+    margin: 5px 0; 
 }
-.answers {
-    margin-bottom: 20px;
+
+#questionnaire {
+    width: auto;
+    margin: auto 0; 
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
-.answers label {
-display: inline;
+input {
+    margin-bottom: 5px 10px;
+}
+button {
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 0px;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    border-bottom: 3px solid rgb(36, 35, 35);
 }
 #submit {
     font-family: Arial;
@@ -25,4 +39,12 @@ display: inline;
 }
 #submit:hover {
     background-color: darkgrey;
+}
+#reset{
+    background-color: red;
+}
+#answer {
+    border: 1px dashed #ccc;
+    background: #eee;
+    padding: 10px;
 }

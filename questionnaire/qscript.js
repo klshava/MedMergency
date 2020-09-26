@@ -1,77 +1,30 @@
-(function(){
-    function buildQuestionaire(){
-        const output = []; //variable stored in html output
-        Questions.forEach(
-            (currentquestion, questionnumber) => 
-        {
-            const answers = [];
+function tabulateAnswers() {
+    var Fluscore = 0;
+    var  Pneumonia= 0; 
 
-            for(letter in currentquestion.answers){
+    var choices = document.getElementsByTagName('input');
 
-                answers.push(
-                    '<label> <input type = "radio",  name = "question${questionnumber}",  value = "${letter}" ${letter} : ${currentquestion.answers[letter]} </label>' 
-                    ); 
+    for(i=0; i<choices.length; i++){
+
+        if(choices[i].checked){
+            if(choices[i].value == 'c1'){
+                Fluscore = Fluscore +1; 
+                Pneumonia = Pneumonia +1; 
             }
-
-            output.push(
-             '<div class = "question"> ${currentquestion.question} </div> <div class = "answers"> ${answers.join(',')} </div>'
-    );  
+            if(choices[i].value == 'c2'){
+                Fluscore = Fluscore +1; 
+            }
         }
-            ); 
-        questionnairecontainter.innerHTML = ouput.join('');
     }
-    function showRecommendation (){
 
-        const answerContainer = questionnairecontainter.querySelectorAll('.answers');
+    var maxscore = Math.max(Fluscore, Pneumonia);
 
-        let numCorrect = 0;
-
-        Questions.forEach((currentquestion,questionnumber) => {
-
-            const answerContainer = answerContainer[questionnumber];
-            const selector = 'input[name = question${questionnumber}]:checked';
-            const userAns = (answerContainer.querySelector(selector) || {}).value;
-
-            if(userAns === currentquestion.correctAns){
-                numCorrect ++;
-
-            }
-
-            });
-        }
-        
-
-        resultsContainer.innerHTML = '${numCorrect} out of {Questions.length}';
-    });
-
-    const questionnairecontainter = document.getElementById('questionnaire');
-    const resultsContainer = document.getElementById('results');
-    const submitButton = document.getElementById('submit');
-    const Questions = [
-        {
-            question: "Have you had a cough in the last 14 days?",
-            answers: {
-                a: "Yes",
-                b: "No"
-            },
-            get answers() {
-                return this._answers;
-            },
-            set answers(value) {
-                this._answers = value;
-            },
-            correctAns: "b"
-        },
-        {
-            question: " ",
-            answers: {
-                a: "Yes",
-                b: "No"
-            },
-            correctAns: "b"
-        }
-    ];
-
-    buildQuestionaire();
-
-    submitButton.addEventListener('click', showRecommendation);
+    var answerbox = document.getElementById('answer');
+  if (Fluscore == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "your symptoms are similar with those of both pneumonia and influenza, however, influenza symptoms are more apparent";
+}
+  function resetAnswer() {
+    var answerbox = document.getElementById('answer');
+    answerbox.innerHTML = "There is a high chance you have influenza";
+}
+}
