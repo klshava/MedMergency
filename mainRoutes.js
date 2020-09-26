@@ -48,9 +48,10 @@ mainRoutes.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'services.html'))
 })
 
-
-
-
+// GET Google Map  page
+mainRoutes.get('/map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'map.html'))
+})
 
 // const db = require('./models/db')
 db.sequelize.sync()
@@ -79,5 +80,3 @@ mainRoutes.get('/changepassword', (req, res) => {
 
 mainRoutes.use('/api/user', userRouter)
 module.exports = mainRoutes
-
-
