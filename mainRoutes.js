@@ -107,7 +107,10 @@ mainRoutes.get('/surgery-map', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'surgery_map.html'))
 })
 
-
+// GET Google Map  page
+mainRoutes.get('/pharma-map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'pharmacies_map.html'))
+})
 
 
 
