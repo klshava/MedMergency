@@ -57,6 +57,10 @@ mainRoutes.get('/forum', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forum.html'))
 })
 
+mainRoutes.get('/questionnaire', (req, res) => {
+  res.sendFile(path.join(__dirname, 'questionnaire', 'qindex.html'))
+})
+
 mainRoutes.get('/cardiogram', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
 })
