@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const mainRoutes = express.Router()
 const userRouter = require(path.join(__dirname, 'routes', 'api', 'usersRoutes'))
+const profileRouter = require(path.join(__dirname, 'routes', 'api', 'profileRoutes'))
 
 const passport = require('passport')
 const db = require('./models/db')
@@ -43,6 +44,10 @@ mainRoutes.get('/main', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'main.html'))
 })
 
+mainRoutes.get('/prescription', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'docs', 'prescription.pdf'))
+})
+
 // GET about page
 mainRoutes.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'about.html'))
@@ -53,65 +58,78 @@ mainRoutes.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'services.html'))
 })
 
-mainRoutes.get('/forum', (req, res) => {
+mainRoutes.get('/forum', ensureAuthenticated,(req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forum.html'))
 })
 // GET Google Map  page
-mainRoutes.get('/location-map', (req, res) => {
+mainRoutes.get('/map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'new_map_.html'))
 })
 
 // GET Google Map cardio page
-mainRoutes.get('/cardio-map', (req, res) => {
+mainRoutes.get('/cardio_map', ensureAuthenticated,(req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardio_map.html'))
 })
 
-mainRoutes.get('/map', (req, res) => {
+mainRoutes.get('/location_map',ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'map.html'))
 })
 
 // GET Google Map dental  page
-mainRoutes.get('/dental-map', (req, res) => {
+mainRoutes.get('/dental_map',ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'dental_map.html'))
 })
 
 // GET Google Map gastro page
-mainRoutes.get('/gastro-map', (req, res) => {
+mainRoutes.get('/gastro_map',ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'gastro_map.html'))
 })
 
+mainRoutes.get('/specialistfind', ensureAuthenticated,(req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'specialistfind.html'))
+})
+
 // GET Google Map medlab page
-mainRoutes.get('/medlab-map', (req, res) => {
+mainRoutes.get('/medlab_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'medlab_map.html'))
 })
 
 // GET Google Map neuro  page
-mainRoutes.get('/neuro-map', (req, res) => {
+mainRoutes.get('/neuro_map',ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'neuro_map.html'))
 })
 
 // GET Google Map opthal page
-mainRoutes.get('/opthal-map', (req, res) => {
+mainRoutes.get('/opthal_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'opthal_map.html'))
 })
 
+mainRoutes.get('/results', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'result1.html'))
+})
+
+mainRoutes.post('/results', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'result1.html'))
+})
+
+
 // GET Google Map ortho page
-mainRoutes.get('/orthop-map', (req, res) => {
+mainRoutes.get('/orthop_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'orthop_map.html'))
 })
 
 // GET Google Map pediatry page
-mainRoutes.get('/pediatry-map', (req, res) => {
+mainRoutes.get('/pediatry_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'pediatry_map.html'))
 })
 
 // GET Google Map  page
-mainRoutes.get('/surgery-map', (req, res) => {
+mainRoutes.get('/surgery_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'surgery_map.html'))
 })
 
 // GET Google Map  page
-mainRoutes.get('/pharma-map', (req, res) => {
+mainRoutes.get('/pharma_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'pharmacies_map.html'))
 })
 
@@ -119,7 +137,7 @@ mainRoutes.get('/pharma-map', (req, res) => {
 
 
 
-mainRoutes.get('/questionnaire', (req, res) => {
+mainRoutes.get('/questionnaire', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'questionnaire', 'qindex.html'))
 })
 
@@ -127,13 +145,19 @@ mainRoutes.get('/cardiogram', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
 })
 
-mainRoutes.get('/editProfile', ensureAuthenticated, (req, res) => {
+mainRoutes.get('/editProfile', ensureAuthenticated,  (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'editProfile.html'))
 })
 
 mainRoutes.get('/userProfile', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'userProfile.html'))
 })
+
+mainRoutes.get('/userProUpdated', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'userProUpdated.html'))
+})
+
+
 
 
 
@@ -163,4 +187,5 @@ mainRoutes.get('/changepassword', (req, res) => {
 })
 
 mainRoutes.use('/api/user', userRouter)
+mainRoutes.use('api/user', profileRouter)
 module.exports = mainRoutes
