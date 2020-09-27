@@ -21,7 +21,7 @@
     <script src="public/js/custom.js"></script>
 
 </head>
-<body class="single-page" onload="getLocation()">
+<body class="single-page">
     <header class="site-header">
         <div class="nav-bar">
             <div class="container">
@@ -53,21 +53,6 @@
             </div><!-- .container -->
         </div><!-- .nav-bar -->
 
-        <script>
-            var x = document.getElementById("demo");
-            function getLocation() {
-              if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-              } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-              }
-            }
-            
-            function showPosition(position) {
-              x.innerHTML = "Latitude: " + position.coords.latitude +
-              "<br>Longitude: " + position.coords.longitude;
-            }
-            </script>
 
 
         <div class="container">
