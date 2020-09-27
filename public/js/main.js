@@ -35,7 +35,7 @@ const reply = [
 
 // Same purpose as the 'alternative' but an attempt at being culturally relevant ;)
 
-const coronavirus = ['Please stay home']
+const coronavirus = ['Please stay home nhrfji3hewdopekwrdpoelkfop mkgrirjeiofjriugjf jnhgirkjgerioekfj jkrfnhurijehigfer']
 
 document.addEventListener('DOMContentLoaded', () => {
   const inputField = document.getElementById('input')

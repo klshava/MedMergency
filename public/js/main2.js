@@ -2,36 +2,34 @@
 
 const trigger = [
   ['hi', 'hey', 'hello', 'good morning', 'good afternoon'],
-  ['how are you'],
-  ['i have a sore throat'], // 'what medication do you recommend for my diagnosis', 'Do i need to come for a face to face consultation'],
-  ['Yes'],
-  ['They caugh'],
+  // ['how are you'],
+  ['have sore throat'], // 'what medication do you recommend for my diagnosis', 'Do i need to come for a face to face consultation'],
+  ['they cough'],
 
-  ['What seems to be the problem']
+  ['diagnosis']
 
 ]
 
 // These are bot responses, paired in order with the above 'trigger' phrases
 
 const reply = [
-  ['Hello!', 'Hi!', 'Hey!', 'Good morning', 'Good afternoon'],
-  [
-    'I am good thanks and how are you?',
-    'Fantastic, how are you?'
-  ],
-  ['Alright, can you please caugh into the mic'],
+  ['whats your problem'],
+  // [
+  // 'I am good thanks and how are you?',
+  // 'Fantastic, how are you?'
+  // ],
+
+  ['Alright can you please cough into the mic'],
   // ['Yes, your condition is quite critical please keep calm medical assistance is on its way', 'No, the is no need head to your nearest pharmacy and get you medication'],
-  ['Alright go ahead'],
   ['Thank you'],
-  ['The diagnosis shows that you have dry caugh, just take caugh serup if no changes occur consult a doctor on chatbot']
+  ['The diagnosis shows that you have dry cough just take cough syrup if no changes occur consult a doctor on chatbot']
 ]
 
 // This is a small set of basically random 'catch alls' for anything that the user enters outside of the possible trigger phrases
 
-/* const alternative = [
-    'Alright, you can go ahead with your question',
-    'I am listening...'
-  ] */
+const alternative = [
+  ['Thank you']
+]
 
 // Same purpose as the 'alternative' but an attempt at being culturally relevant ;)
 
