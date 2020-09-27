@@ -66,6 +66,9 @@ mainRoutes.get('/cardio-map', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardio_map.html'))
 })
 
+mainRoutes.get('/map', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'map.html'))
+})
 
 // GET Google Map dental  page
 mainRoutes.get('/dental-map', (req, res) => {
@@ -131,6 +134,8 @@ mainRoutes.get('/editProfile', ensureAuthenticated, (req, res) => {
 mainRoutes.get('/userProfile', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'userProfile.html'))
 })
+
+
 
 // const db = require('./models/db')
 db.sequelize.sync()
