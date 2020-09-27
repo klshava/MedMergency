@@ -35,13 +35,18 @@ mainRoutes.get('/terms', (req, res) => {
 })
 
 // GET T&C page
-mainRoutes.get('/chatbot',ensureAuthenticated, (req, res) => {
+mainRoutes.get('/chatbot', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'chatbox.html'))
 })
 
 // GET main page
 mainRoutes.get('/main', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'main.html'))
+})
+
+// GET main2 page
+mainRoutes.get('/main2', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'diagnosis.html'))
 })
 
 mainRoutes.get('/prescription', ensureAuthenticated, (req, res) => {
@@ -58,7 +63,7 @@ mainRoutes.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'services.html'))
 })
 
-mainRoutes.get('/forum', ensureAuthenticated,(req, res) => {
+mainRoutes.get('/forum', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forum.html'))
 })
 // GET Google Map  page
@@ -67,25 +72,25 @@ mainRoutes.get('/map', ensureAuthenticated, (req, res) => {
 })
 
 // GET Google Map cardio page
-mainRoutes.get('/cardio_map', ensureAuthenticated,(req, res) => {
+mainRoutes.get('/cardio_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardio_map.html'))
 })
 
-mainRoutes.get('/location_map',ensureAuthenticated, (req, res) => {
+mainRoutes.get('/location_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'map.html'))
 })
 
 // GET Google Map dental  page
-mainRoutes.get('/dental_map',ensureAuthenticated, (req, res) => {
+mainRoutes.get('/dental_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'dental_map.html'))
 })
 
 // GET Google Map gastro page
-mainRoutes.get('/gastro_map',ensureAuthenticated, (req, res) => {
+mainRoutes.get('/gastro_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'gastro_map.html'))
 })
 
-mainRoutes.get('/specialistfind', ensureAuthenticated,(req, res) => {
+mainRoutes.get('/specialistfind', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'specialistfind.html'))
 })
 
@@ -95,7 +100,7 @@ mainRoutes.get('/medlab_map', ensureAuthenticated, (req, res) => {
 })
 
 // GET Google Map neuro  page
-mainRoutes.get('/neuro_map',ensureAuthenticated, (req, res) => {
+mainRoutes.get('/neuro_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'neuro_map.html'))
 })
 
@@ -111,7 +116,6 @@ mainRoutes.get('/results', ensureAuthenticated, (req, res) => {
 mainRoutes.post('/results', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'result1.html'))
 })
-
 
 // GET Google Map ortho page
 mainRoutes.get('/orthop_map', ensureAuthenticated, (req, res) => {
@@ -133,10 +137,6 @@ mainRoutes.get('/pharma_map', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'pharmacies_map.html'))
 })
 
-
-
-
-
 mainRoutes.get('/questionnaire', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'questionnaire', 'qindex.html'))
 })
@@ -145,7 +145,7 @@ mainRoutes.get('/cardiogram', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'cardiogram.html'))
 })
 
-mainRoutes.get('/editProfile', ensureAuthenticated,  (req, res) => {
+mainRoutes.get('/editProfile', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'editProfile.html'))
 })
 
@@ -156,10 +156,6 @@ mainRoutes.get('/userProfile', ensureAuthenticated, (req, res) => {
 mainRoutes.get('/userProUpdated', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'userProUpdated.html'))
 })
-
-
-
-
 
 // const db = require('./models/db')
 db.sequelize.sync()

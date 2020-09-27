@@ -29,9 +29,9 @@ const reply = [
 // This is a small set of basically random 'catch alls' for anything that the user enters outside of the possible trigger phrases
 
 /* const alternative = [
-  'Alright, you can go ahead with your question',
-  'I am listening...'
-] */
+    'Alright, you can go ahead with your question',
+    'I am listening...'
+  ] */
 
 // Same purpose as the 'alternative' but an attempt at being culturally relevant ;)
 
@@ -116,3 +116,4 @@ function speak (string) {
   synth.speak(u)
   debugger
 }
+
