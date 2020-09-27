@@ -3,11 +3,11 @@
 const trigger = [
   ['hi', 'hey', 'hello', 'good morning', 'good afternoon'],
   ['how are you'],
-  ['i am good i would like a brief summary of my questionaire results'], // 'what medication do you recommend for my diagnosis', 'Do i need to come for a face to face consultation'],
-  ['can i book an appointment'],
-  ['when are you available'],
+  ['i have a sore throat'], // 'what medication do you recommend for my diagnosis', 'Do i need to come for a face to face consultation'],
+  ['Yes'],
+  ['They caugh'],
 
-  ['can i book an appointment for 10:00 today']
+  ['What seems to be the problem']
 
 ]
 
@@ -19,19 +19,19 @@ const reply = [
     'I am good thanks and how are you?',
     'Fantastic, how are you?'
   ],
-  ['From you Questionaire results i would Recomend that you go to your nearest phamarcy as shown by Google maps, The medication does not require a prescription.'],
+  ['Alright, can you please caugh into the mic'],
   // ['Yes, your condition is quite critical please keep calm medical assistance is on its way', 'No, the is no need head to your nearest pharmacy and get you medication'],
-  ['yes you can come to our offices at 14:30 tomorrow'],
-  ['I am available today at 12:00'],
-  ['Sorry that spot has been allocated to someone else please book another spot']
+  ['Alright go ahead'],
+  ['Thank you'],
+  ['The diagnosis shows that you have dry caugh, just take caugh serup if no changes occur consult a doctor on chatbot']
 ]
 
 // This is a small set of basically random 'catch alls' for anything that the user enters outside of the possible trigger phrases
 
 /* const alternative = [
-  'Alright, you can go ahead with your question',
-  'I am listening...'
-] */
+    'Alright, you can go ahead with your question',
+    'I am listening...'
+  ] */
 
 // Same purpose as the 'alternative' but an attempt at being culturally relevant ;)
 
